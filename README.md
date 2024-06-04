@@ -29,7 +29,7 @@ With GitHub Actions two workflows are available:
 - [basic.yml](.github/workflows/basic.yml) compiles and runs the application.
 - [basic_w_report.yml](.github/workflows/basic_w_report.yml) compiles and runs the application; then generates a test report using [phoenix-actions/test-reporting](https://github.com/phoenix-actions/test-reporting).
 
-Use in the GitHub web interface the [*Actions*](./actions) view to execute the *CI test run* and get *Test results*.
+Use in the GitHub web interface the [*Actions*](/../../actions) view to execute the *CI test run* and get *Test results*.
 
 ### Desktop
 
