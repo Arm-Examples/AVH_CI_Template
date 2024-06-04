@@ -50,3 +50,20 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Clangd
+.clangd
+
+# uv2csolution
+uv2csolution.log
+
+# Csolution Output Files
+tmp
+out
+*.cprj
+*.cbuild.yml
+*.cbuild-idx.yml
+*.cbuild-set.yml
+
+# Misc
+.DS_Store

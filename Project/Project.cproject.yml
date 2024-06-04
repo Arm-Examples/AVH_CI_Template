@@ -1,0 +1,17 @@
+# A project translates into one executable or library.
+project:
+
+  groups:
+    - group: Source Files
+      files:
+        - file: ./main.c
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: CMSIS:CORE                             # short form, vendor selected from available packs
+    - component: Device:Startup&C Startup
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source      # long form, vendor explicitly stated
+    - component: CMSIS:OS Tick
+    - component: Arm-Packs::Test:Unity&Classic
+

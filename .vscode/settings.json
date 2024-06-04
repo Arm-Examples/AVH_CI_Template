@@ -1,0 +1,12 @@
+{
+    "cmsis-csolution.actions": [
+        {
+            "path": "get_started.csolution.yml",
+            "target": "avh",
+            "config": {
+                "run": "virtual-hardware.run: Run Program",
+                "debug": "Arm Debugger FVP"
+            }
+        }
+    ]
+}

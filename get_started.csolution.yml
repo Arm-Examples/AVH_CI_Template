@@ -1,0 +1,29 @@
+# A solution is a collection of related projects that share same base configuration.
+solution:
+  created-for: CMSIS-Toolbox@2.4.0
+  cdefault:
+  compiler: AC6
+
+  packs:
+    - pack: ARM::CMSIS
+    - pack: ARM::Cortex_DFP
+    - pack: ARM::CMSIS-RTX
+    - pack: Arm-Packs::Unity
+
+  target-types:
+    - type: avh                               # runs on Arm Virtual Hardware
+      device: ARMCM3
+                                              # add more hardware targets (don't forget to add the required packs)
+                                              
+  build-types:                                # defines toolchain options for 'debug' and 'release'
+    - type: debug
+      optimize: debug
+      debug: on
+
+    - type: release
+      optimize: balanced
+      debug: off
+ 
+  # List related projects.
+  projects:
+    - project: Project/Project.cproject.yml
