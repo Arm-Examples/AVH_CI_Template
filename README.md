@@ -5,7 +5,7 @@ This repository contains a **CI Template for unit test automation** that uses [G
 The tests run on [**Arm Virtual Hardware - Fixed Virtual Platforms (AVH-FVP)**](https://arm-software.github.io/AVH/main/simulation/html/index.html) which are simulation models that implement a Cortex-M, Corstone, or Cortex-M/Ethos-U device sub-systems. These models are designed for software verification and testing. It allows simulation-based test automation of various software workloads, including unit tests, integration tests, and fault injection.
 
 The tools used in this **CI Template** are part of [Keil MDK Version 6](https://www.keil.arm.com/keil-mdk/). For evaluation purposes the *MDK - Community Edition* can be used, but commericial usage requires a license of the *MDK - Professional Edition*.
-The tool installation is managed with [vcpkg](https://www.keil.arm.com/artifacts/) using a [configuration file](./tree/main/vcpkg-configuration.json) that ensures consistent setup on Desktop computers and the CI system.
+The tool installation is managed with [vcpkg](https://www.keil.arm.com/artifacts/) using a [configuration file](./vcpkg-configuration.json) that ensures consistent setup on Desktop computers and the CI system.
 
 ![Create, debug, and test](./create_debug_test.png)
 
@@ -29,7 +29,7 @@ With GitHub Actions two workflows are available:
 - [basic.yml](.github/workflows/basic.yml) compiles and runs the application.
 - [basic_w_report.yml](.github/workflows/basic_w_report.yml) compiles and runs the application; then generates a test report using [phoenix-actions/test-reporting](https://github.com/phoenix-actions/test-reporting).
 
-Use in the GitHub web interface the [*Actions*](actions) view to execute the *CI test run* and get *Test results*.
+Use in the GitHub web interface the [*Actions*](./actions) view to execute the *CI test run* and get *Test results*.
 
 ### Desktop
 

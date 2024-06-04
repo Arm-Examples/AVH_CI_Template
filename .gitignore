@@ -64,6 +64,7 @@ out
 *.cbuild.yml
 *.cbuild-idx.yml
 *.cbuild-set.yml
+*.cbuild-pack.yml
 
 # Misc
 .DS_Store
