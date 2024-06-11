@@ -22,6 +22,8 @@ Directory                     | Content
 
 The [Project](Project) tests a single function (*my_sum*) using the [Unity test framework](https://github.com/MDK-Packs/Unity) that is available as [CMSIS software pack](https://www.keil.arm.com/packs/unity-arm-packs). The initial configuration contains a "test case error" that exemplifies the Unity test reporting.
 
+> This video contains a demo: [Using CMSIS-Toolbox and Keil MDK v6 in CI/CD Workflows](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1718006126984001DUAn)
+
 ### GitHub
 
 With GitHub Actions two workflows are available:
@@ -80,5 +82,6 @@ Resource           | Description
 
 - [MDK v6 Technical Deep Dive](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1713958336497001CQIR)
 - [CLI builds using CMSIS-Toolbox](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1708432622207001feYV)
+- [Using CMSIS-Toolbox and Keil MDK v6 in CI/CD Workflows](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1718006126984001DUAn)
 - [Using CMSIS-View and CMSIS-Compiler](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1706872120089001ictY)
 - [Data streaming with CMSIS-Stream and SDS](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1709221848113001nOU5)
