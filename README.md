@@ -9,20 +9,24 @@ The tool installation is managed with [vcpkg](https://www.keil.arm.com/artifacts
 
 ![Create, debug, and test](./create_debug_test.png)
 
-## Repository Structure
+## Usage
 
 This is a template repository that can be used as starting point for validation projects. Click **Use this template - Create a new repository** to start your own CI test project.
+
+> **Note:**
+>
+> Login with your GitHub account to enable the button **Use this template - Create a new repository**.
+
+The [Project](Project) tests a single function (*my_sum*) using the [Unity test framework](https://github.com/MDK-Packs/Unity) that is available as [CMSIS software pack](https://www.keil.arm.com/packs/unity-arm-packs). The initial configuration contains a "test case error" that exemplifies the Unity test reporting.
+
+> This video contains a demo: [Using CMSIS-Toolbox and Keil MDK v6 in CI/CD Workflows](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1718006126984001DUAn)
+
+### Repository Structure
 
 Directory                     | Content
 :-----------------------------|----------
 [.github/workflows](.github/workflows) | Workflow YML files that gets you started with GitHub Actions for CMSIS projects.
 [Project](Project)                     | A simple unit test application in [*csolution project format*](https://github.com/Open-CMSIS-Pack/cmsis-toolbox).
-
-## Usage
-
-The [Project](Project) tests a single function (*my_sum*) using the [Unity test framework](https://github.com/MDK-Packs/Unity) that is available as [CMSIS software pack](https://www.keil.arm.com/packs/unity-arm-packs). The initial configuration contains a "test case error" that exemplifies the Unity test reporting.
-
-> This video contains a demo: [Using CMSIS-Toolbox and Keil MDK v6 in CI/CD Workflows](https://on-demand.arm.com/flow/arm/devhub/sessionCatalog/page/pubSessCatalog/session/1718006126984001DUAn)
 
 ### GitHub
 
