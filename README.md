@@ -13,8 +13,6 @@ The tool installation is managed with [vcpkg](https://www.keil.arm.com/artifacts
 
 This is a template repository that can be used as starting point for validation projects. Click **Use this template - Create a new repository** to start your own CI test project.
 
-> **Note:**
->
 > Login with your GitHub account to enable the button **Use this template - Create a new repository**.
 
 The [Project](Project) tests a single function (*my_sum*) using the [Unity test framework](https://github.com/MDK-Packs/Unity) that is available as [CMSIS software pack](https://www.keil.arm.com/packs/unity-arm-packs). The initial configuration contains a "test case error" that exemplifies the Unity test reporting.
