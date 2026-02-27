@@ -1,3 +1,7 @@
+[![License Apache--2.0](https://img.shields.io/badge/License-Apache--2.0-green?label=License)](https://github.com/Arm-Examples/AVH_CI_Template/blob/main/LICENSE)
+[![Run Example](https://img.shields.io/github/actions/workflow/status/Arm-Examples/AVH_CI_Template/basic.yml?logo=arm&logoColor=0091bd&label=Run%20Example)](./.github/workflows/basic.yml)
+[![Run Example and Report](https://img.shields.io/github/actions/workflow/status/Arm-Examples/AVH_CI_Template/basic_w_report.yml?logo=arm&logoColor=0091bd&label=Run%20Example%20and%20Report)](./.github/workflows/basic_w_report.yml)
+
 # AVH CI Template
 
 This repository contains a **CI Template for unit test automation** that uses [GitHub Actions](https://github.com/features/actions) on a [GitHub-hosted runner](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners) with an Ubuntu Linux system. A report is optionally generated using  the [Unity test framework](https://github.com/MDK-Packs/Unity).
