@@ -55,7 +55,7 @@ jobs:
       
       # Upload the junit report to the check run of the workflow
       - name: Test Report
-        uses: phoenix-actions/test-reporting@v16
+        uses: phoenix-actions/test-reporting@v17
         if: success() || failure()    # run this step even if previous step failed
         with:
             name: Test Report         # Name of the check run which will be created
