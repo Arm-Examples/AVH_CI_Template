@@ -1,6 +1,6 @@
-name:  Compile - Run - Report
+name: Compile - Run - Report
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   pull_request:
     branches: [main]
   push:
@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '30 22 * * 0'      # Run every Sunday at 22:30
 
-permissions: 
+permissions:
   contents: read
   actions: read
   checks: write
@@ -26,21 +26,22 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.13'
-      - run: 
+
+      - name: Install Python packages
+        run: 
           pip install junit_reporter
-         
+
       # Install vcpkg tools from the vcpkg-configuration.json and activate an Arm tools license
       - name: Activate vcpkg
         uses: ARM-software/cmsis-actions/vcpkg@v1
 
       - name: Activate Arm tool license
         uses: ARM-software/cmsis-actions/armlm@v1
-  
-      # Build the project, run the test and convert the log to junit format
+
       - name: Build
         run: |
           echo "Building get started example ..."
-          cbuild get_started.csolution.yml --packs --update-rte --context .debug+avh 
+          cbuild get_started.csolution.yml --packs --update-rte --context .debug+avh
 
       - name: Execute
         run: |
@@ -48,16 +49,20 @@ jobs:
           FVP_MPS2_Cortex-M3 --simlimit 10 -f Project/fvp_config.txt -a out/Project/avh/debug/Project.axf | tee Project.avh.log
 
       - name: Convert log to junit
+        if: success() || failure()
         run: |
           echo "Converting log to junit..."
           python Project/report.py Project.avh.log
           cat Project.avh.xml
-      
+
       # Upload the junit report to the check run of the workflow
       - name: Test Report
         uses: phoenix-actions/test-reporting@v16
         if: success() || failure()    # run this step even if previous step failed
         with:
-            name: Test Report         # Name of the check run which will be created
-            path: Project.avh.xml     # Path to test results
-            reporter: jest-junit      # Format of test results
+          name: Test Report           # Name of the check run which will be created
+          path: Project.avh.xml       # Path to test results
+          reporter: jest-junit        # Format of test results
+          # This keeps one workflow and avoids creating a Check Run on PRs, where fork tokens may be read-only. 
+          # After merge / push to main, it still creates the Check Run.
+          output-to: ${{ github.event_name == 'pull_request' && 'step-summary' || 'checks' }}  
