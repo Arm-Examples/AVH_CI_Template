@@ -17,7 +17,7 @@
  *
  * -----------------------------------------------------------------------------
  *
- * $Revision:   V5.6.0
+ * $Revision:   V5.6.1
  *
  * Project:     CMSIS-RTOS RTX
  * Title:       RTX Configuration definitions
